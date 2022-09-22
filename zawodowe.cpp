@@ -50,3 +50,23 @@ int main() {
 
 	return 0;
 }
+
+	string napis = "text"; 
+	0string napis2("text");
+	string napis3 = ("text");
+
+
+#include <iostream>
+using namespace std;
+int main() {
+	setlocale(LC_ALL, "PL_pl");
+	string lancuch, lancuch2;
+	cout << "Podaj nazwę dwuczłonową języka programowania:"; cin >> lancuch;
+	cout << "Podano nazwę: " << lancuch << endl;
+	cin.ignore(numeric_limits < streamsize >::max(), '\n');
+	cin >> lancuch2;
+	cout << "Nowy bufor: " << lancuch2 << endl;
+	return 0;
+
+}
+
