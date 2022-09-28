@@ -55,6 +55,16 @@ logiczne
 -- dekrementacja
 */
 
+/*porównania
+== wynik true kiedy winiki są rowne
+!= wynik true gdy argumenty są rozne
+=== wynik true gdy argumenty sa tego samego typu i sa rowne
+!== wynik true gdy argumenty sa rozne lub sa innych typow
+>(=) wynik true gdy pierwszy argument jest wiekszy(lub rowny) od drugiego
+<(=) wynik true gdy pierwszy argument jest mniejszy(lub rowny) od drugiego
+
+*/
+
 var a = 10, b = 15;
 var dodawanie = a + b;
 var odejmowanie = a - b;
