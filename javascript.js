@@ -65,6 +65,28 @@ logiczne
 
 */
 
+//OPERATORY BITOWE
+// & AND iloczyn bitowy
+// | OR suma bitowa  0101|0101=0101
+// ~ NOT negacja bitowa ~0101=1010
+// ^ bitowa roznica symetryczna 0101^0001=0100
+// >> przesuniecie bitow w prawo 0101>>1=0010
+// << przesuniecie bitow w lewo 0101<<1=1010
+// >>> przesuniecie bitowe w prawo z wypelnieniem zerami 0101>>>1=0010
+
+
+//OPERATORY LOGICZNE
+//&& and iloczyn logiczny a&&b (true gdy a i b jest true)
+// || or suma logiczna a||b (false tylko gdy a i b jest false)
+// | not negacja logiczna !a (zmienia wartosc a na przeciwna)
+
+//OPERATORY PRZYPISANIA
+// += x=x+y
+// -= x = x-y
+// *= x = x*y
+// /= x = x/y
+// %= x = x%y
+
 var a = 10, b = 15;
 var dodawanie = a + b;
 var odejmowanie = a - b;
