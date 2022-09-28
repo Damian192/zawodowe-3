@@ -26,3 +26,13 @@ var h = false;
 
 //typ undefined 
 var x;
+
+//ZŁOŻONE TYPY DANYCH 
+
+var osoba ={nazwisko:"kowalski", imie:"janusz", wiek:90};
+
+document.write("Imie: " + osoba.imie );
+
+//TABLICE
+
+var liczby =[10,23,50,90,95];
