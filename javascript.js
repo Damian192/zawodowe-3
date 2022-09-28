@@ -36,3 +36,33 @@ document.write("Imie: " + osoba.imie );
 //TABLICE
 
 var liczby =[10,23,50,90,95];
+
+/*OPERATORY
+arytmetyczne 
+porównania
+bitowe
+przypisania
+logiczne
+*/
+
+/*arytmetyczne
+- odejmowanie
++ dodawanie
+* mnożenie
+/ dzielenie
+% modulo (reszta z dzielenia)
+++ ikrementacja
+-- dekrementacja
+*/
+
+var a = 10, b = 15;
+var dodawanie = a + b;
+var odejmowanie = a - b;
+var mnozenie = a * b;
+var dzielenie = a / b;
+document.write("Zmienna a = " + a + "<br>" + "Zmienna b = " + b + "<br>");
+
+
+document.write("Dodawanie:" + dodawanie + "<br>" + " odejmowanie: " + odejmowanie + "<br>" + " mnożenie: " + mnozenie + "<br>" + " dzielenie: " + dzielenie)
+
+
