@@ -70,3 +70,34 @@ int main() {
 
 }
 
+
+	string s1 = "c++11", s2 = "11", s3 = "13";
+	//porównanie łańcuchów zwróci 1 gdy są różne
+	//zwróci -1 gdy są różne i s2 bedzie dłużyszy od s3,
+	//zwróci 0 gdy są równe 
+	cout << s3.compare(s2) << endl;
+
+	// wyszukiwanie w łancuchu s1 łancucha s2
+	//zwróci pozycje pierwszego znaku wystąpienia łańcucha
+	cout << s1.find(s2) << endl;
+
+	//wyciagniecie łańcucha z zadanego łancucha zrodłowego 
+	int poczatek = 0, dlugosc = 3;
+
+	string s4 = s1.substr(poczatek, dlugosc);
+	cout << s4 << endl;
+
+	//okreslenie długosci łancucha s4
+	cout << s4.length() << endl;
+
+	//okreslanie rozmiaru łanuchca znaków w bajtach
+	cout << s4.size() << endl;
+
+	//zastapenie podlacucha w lancuchu zrodlowym
+	poczatek = 1, dlugosc = 3;
+	cout << s3.replace(poczatek, dlugosc, "7");
+
+	//nadaje nowa wartosc łanuchowi ( prawie to samo co = )
+	cout << s4.assign("14") << endl;
+
+	return 0;
