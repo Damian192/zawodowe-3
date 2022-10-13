@@ -120,8 +120,71 @@ int main() {
 	data_zatrudnienia.mm = 1;
 	data_zatrudnienia.rrrr = 1970;
 
+	//lub
 	data_zatrudnienia = { 1,1,1970 };
 	
 
 	return 0;
 }
+struct Data {
+	unsigned short int dd, mm, rrrr;
+};
+
+struct Uczen { // dellaracja i zainicjowanie struktury
+	char imie[20];
+	char nazwisko[20];
+	int klasa;
+	char grupa[2];
+	int numer_w_dzienniku;
+	char miejsce[50];
+	// Deklaracja pola należacego do typu data 
+	Data data_urodzenia;
+
+};
+using namespace std;
+int main() {
+	setlocale(LC_ALL, "");
+
+	Uczen u;
+	u = { "Janusz", "Kowalski", 3, "a", 1, "Częstochowa"};
+	u.data_urodzenia = { 12, 4, 1970 };
+
+
+	return 0;
+}
+
+#include <iostream>
+#include <windows.h>
+
+struct Data {
+	int d, m, r;
+
+};
+
+using namespace std;
+int main() {
+	setlocale(LC_ALL, "");
+
+	Data d1 = { 19,11,2019 };
+	Data d2{ 12.12,2012 };
+
+
+	return 0;
+}
+
+struct Data {
+	int d, m, r;
+};
+
+struct Uczen {
+	string imie, nazwisko;
+	int nr_ewid;
+	Data data_urodzenia;
+	unsigned short oceny[3];
+};
+
+using namespace std;
+int main() {
+	setlocale(LC_ALL, "");
+
+	Uczen u = { "Janusz", "Kowalski", 123,{1,1,1999},{5,5,5} }; // nawiasy w nawiasach do daty i na tablice
