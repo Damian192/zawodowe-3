@@ -101,3 +101,27 @@ int main() {
 	cout << s4.assign("14") << endl;
 
 	return 0;
+
+
+
+	//struktura
+struct Data {
+	int dd;
+	int mm;
+	int rrrr;
+};
+
+using namespace std;
+int main() {
+	setlocale(LC_ALL, "");
+
+	Data data_zatrudnienia;
+	data_zatrudnienia.dd = 1;
+	data_zatrudnienia.mm = 1;
+	data_zatrudnienia.rrrr = 1970;
+
+	data_zatrudnienia = { 1,1,1970 };
+	
+
+	return 0;
+}
