@@ -119,3 +119,19 @@ for(var k = 1; k <=9; k++) {
   document.write("<br>");
  }}
 
+//////////////////////////////////////////////////// zadanie
+
+
+var suma = 0;
+for (i = 1; i<=100; i++) {
+
+  if((i%4) ==0) {
+    var x = i+1;
+    document.write(x + "<br>");
+    suma += x;
+
+  }
+  if(suma > 100) {
+    break;
+  }
+}
