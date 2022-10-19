@@ -97,4 +97,14 @@ document.write("Zmienna a = " + a + "<br>" + "Zmienna b = " + b + "<br>");
 
 document.write("Dodawanie:" + dodawanie + "<br>" + " odejmowanie: " + odejmowanie + "<br>" + " mnożenie: " + mnozenie + "<br>" + " dzielenie: " + dzielenie)
 
+//instrukcja break;
 
+var i = 0,
+k = 5;
+
+do {
+  var j = k*i;
+  document.write("Wynik to: " + j + "<br>");
+
+  if(j > 30) break; // break konczy petle
+} while(i++<10)
