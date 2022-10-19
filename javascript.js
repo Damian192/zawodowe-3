@@ -108,3 +108,14 @@ do {
 
   if(j > 30) break; // break konczy petle
 } while(i++<10)
+
+  
+  
+  //////////////////////////////////////////////////// zadanie
+  for(var i = 1; i<=10; i++) {
+for(var k = 1; k <=9; k++) {
+  var x = k*i;
+  document.write(i+ "*" + k + "=" + x);
+  document.write("<br>");
+ }}
+
