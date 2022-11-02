@@ -135,3 +135,83 @@ for (i = 1; i<=100; i++) {
     break;
   }
 }
+
+
+//zasięg zmiennych
+//zmienna globalna - jest widoczna w calym skrypcie
+//zmienna lokalna - jest widoczna tylko wewnatrz funkcji w ktorej jest zadeklarowana
+//słowo kluczowe - var służy do deklarowania zmiennych jak 
+//np var a - zmienna lokalna
+//np b - zmienna globalna
+
+function suma() {
+  var i;
+  wynik = 0;//zmienna globalna 
+  var l_p=arguments.length;
+  for(i=0;i<l_p;i++) {
+    wynik+=arguments[i];
+  }
+  return wynik;
+}
+
+suma(3,5,7);
+
+document.write("Suma elementów: " + wynik);
+
+//zmienna jest widoczna tylkow bloku {}
+// słowo kluczowe let - do tworzenia zmiennych o zasięgu blokowym.
+//np. let a;
+
+let a = 10;
+
+{
+  let a = 15;
+  document.write("Zmienna w bloku: " + a)
+}
+document.write("Zmienna globalna: " + a)
+
+//funkcje wbudowane 
+
+/**
+ * parseInt()
+ * parseFloat()
+ * IsNaN()
+ * isFinite()
+ * alert()
+ */
+
+//parseInt() - pobiera argument dowolnego typu zwraca wartość liczbową
+
+//parseInt("123") -> 123
+//parseInt("123AB", 16) -> 74667
+//parseInt("123", 8) -> 83
+//parseInt("123AB", 8) -> 83 //bez AB
+//parseInt("0337") -> 255 //jako ósemkowy
+//parseInt("0x373") ->883 // jako szesnastkowy
+
+var c1= "12", c2 = "34";
+var wynik = c1+c2;
+document.write("Zwykłe dodawanie c1+c2 = " + wynik + " <br>")
+
+c1=parseInt(c1); //konwersja bierzącej zawartości tekstu 
+c2=parseInt(c2);
+var wynik = c1+c2;
+document.write("dodawanie po konwersji na liczby c1+c2 = " + wynik + " <br>")
+
+//parseFloat() - działa jak parseInt, można ją stosować do wartości ułamkowych.
+//np parseFloat("432.32");
+
+//IsNaN() - sprawdza czy wartość parametru nie jest liczbą 
+
+//IsNaN(NaN) -> true
+//IsNaN(567) -> false
+//IsNaN(54.54) -> false
+//IsNaN("zx334") -> true
+
+//isFinite() - sprawdza czy parametr to liczba różna od infinity(nieskonczonsci) oraz NaN
+//isFinite(infinity) -> false
+//isFinite(-infinity) -> false
+//isFinite(67) -> true
+//isFinite(2E23) -> true
+
+//alert() - wyświetla komunikat w oknie dialogowym 
