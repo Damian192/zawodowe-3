@@ -188,3 +188,51 @@ int main() {
 	setlocale(LC_ALL, "");
 
 	Uczen u = { "Janusz", "Kowalski", 123,{1,1,1999},{5,5,5} }; // nawiasy w nawiasach do daty i na tablice
+	
+	
+	
+	
+	////////////////////////unie
+	
+	#include <iostream>
+#include <windows.h>
+
+struct Plane 
+{
+	float x, y;
+
+};
+struct Space {
+	float x, y, z;
+};
+union Coordinates {
+	Plane w2;
+	Space w3;
+
+	
+};
+using namespace std;
+int main() {
+	setlocale(LC_ALL, "");
+
+	//deklaracja zmiennej unijnej 
+	Coordinates w;
+
+	cout << "Podaj wartości współrzędnych punktu na płaszczyźnie: " << endl;
+	cout << "x = "; cin >> w.w2.x;
+	cout << "y = "; cin >> w.w2.y;
+	cout << "Wprowadzone współrzędne punktu: " << endl;
+	cout << "x: " << w.w2.x << endl;
+	cout << "y: " << w.w2.y << endl;
+
+	cout << "Podaj wartości współrzędnych punktu na przestrzeni: " << endl;
+	cout << "x:"; cin >> w.w3.x;
+	cout << "y:"; cin >> w.w3.y;
+	cout << "z:"; cin >> w.w3.z;
+
+	cout << "Wprowadzone współrzędne punktu: " << endl;
+	cout << "x:" << w.w3.x << endl;
+	cout << "y:" << w.w3.y << endl;
+	cout << "z:" << w.w3.z << endl;
+	return 0;
+}
