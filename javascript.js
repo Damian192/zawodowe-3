@@ -215,3 +215,23 @@ document.write("dodawanie po konwersji na liczby c1+c2 = " + wynik + " <br>")
 //isFinite(2E23) -> true
 
 //alert() - wyświetla komunikat w oknie dialogowym 
+
+
+
+function Klient (p_nazwisko, p_imie, p_zamowienie) {
+  this.nazwisko = p_nazwisko;
+  this.imie = p_imie;
+  this.zamowienie = p_zamowienie;
+  
+  this.wypisz = function() {
+    document.write(this.imie + " " + this.nazwisko + " " + this.zamowienie);
+  }
+}
+
+
+var k1 = new Klient("Kowalski", "Janusz", "Buty");
+k1.wypisz();
+
+
+
+
