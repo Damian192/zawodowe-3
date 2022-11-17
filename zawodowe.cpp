@@ -236,3 +236,56 @@ int main() {
 	cout << "z:" << w.w3.z << endl;
 	return 0;
 }
+	
+	
+	
+	////////////////////////////////////////////////////zadanie
+	#include <iostream>
+#include <windows.h>
+struct Dane {
+	float a, b;
+};
+union Figury
+{
+	Dane kwadrat;
+	Dane prostokat;
+};
+
+using namespace std;
+int main() {
+	setlocale(LC_ALL, "");
+	int x, pp, obw;
+Figury zmienne;
+	cout << "Aby obliczyć pole powierzchni i obwód kwadratu wpisz 1. " << endl;
+	cout << "Aby obliczyć pole powierzchni i obwód prostokąta wpisz 2. " << endl;
+	cin >> x;
+	switch (x){
+		case 1:
+			cout << "wprowadz a: " << endl;
+			cin >> zmienne.kwadrat.a;
+
+			pp = zmienne.kwadrat.a * zmienne.kwadrat.a;
+			obw = zmienne.kwadrat.a * 4;
+
+			cout << "Pole powierzchni kwadratu wynosi: " << pp << endl;
+			cout << "Obwód kwadratu wynosi: " << obw << endl;
+				break;
+		case 2: 
+			cout << "wprowadz a: " << endl;
+			cin >> zmienne.kwadrat.a;
+			cout << "Wprowadz b: " << endl;
+			cin >> zmienne.kwadrat.b;
+
+			pp = zmienne.prostokat.a * zmienne.prostokat.b;
+			obw = zmienne.prostokat.a * 2 + zmienne.prostokat.b *2;
+
+			cout << "Pole powierzchni prostokąta wynosi: " << pp << endl;
+			cout << "Obwód prostokąta wynosi: " << obw << endl;
+			break;
+		default:
+			cout << "Wybierz 1 lub 2.";
+			break;
+}
+
+	return 0;
+}
