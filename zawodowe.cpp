@@ -289,3 +289,49 @@ Figury zmienne;
 
 	return 0;
 }
+	
+	
+	
+	#include <iostream>
+#include <windows.h>
+
+using namespace std;
+
+//parametry wejsciowe funkcji
+
+/*
+typ_zwracany nazwa_funkcji(typ_parametru nazwa_parametru) {
+ instrukcje;
+}
+*/
+
+//definicja funkcji
+double f_pole(double b1, double b2) {
+	b1 = b1 + 1; // to jest zmienna lokalna czyli kopia parametru 
+	return b1 * b2; // zwrot wartości wyrażenia
+}
+// w tym momencie usuwa sie kopia zmiennej b1
+// deklaracja funkcji 
+// ctrl+ lpm na nazwe deklarowanej funkcji przenosi do definicji
+	double f_obwod(double, double);
+
+int main() {
+	setlocale(LC_ALL, "");
+
+	double bok1, bok2, pole, obwod;
+	bok1 = 1;
+	bok2 = 2;
+
+	pole = f_pole(bok1, bok2);
+	obwod = f_obwod(bok1, bok2);
+	cout << "Pole i obwód prostokąta" << endl;
+	cout << "Pole: " << pole <<endl;
+	cout << "Obwód:" << obwod << endl;
+
+	return 0;
+}
+
+//definicja funkcji
+double f_obwod(double b1, double b2) {
+	return 2 * b1 + 2 * b2;
+}
