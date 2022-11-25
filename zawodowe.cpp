@@ -335,3 +335,47 @@ int main() {
 double f_obwod(double b1, double b2) {
 	return 2 * b1 + 2 * b2;
 }
+
+	
+	
+	#include <iostream>
+
+using namespace std;
+
+//parametry jako referencje do stałych {const}
+
+/*
+	const typ_parametru& nazwa parametru
+
+	& = operator referencji 
+
+	taki sposób przekazywania danych wejsciowych zapewnia status tylko do odczytu parametru 
+
+	w tym przypdaku do parametru funkcji podstawiana jest jedynie referencja (adres)
+	faktycznego objektu a nie jego kopia . daje to mniejsze zuzycie pamieci
+*/
+
+float pole(const float&,const float&);
+float obwod(const float&,const float&);
+
+
+int main() {
+	setlocale(LC_ALL, "");
+
+	float pi = 3.141592, r = 2;
+	float p = pole(pi, r);
+	float o = obwod(pi, r);
+
+	cout << "Pole koła wynosi: " << p << endl;
+	cout << "Obwod koła wynosi: " << o << endl;
+
+
+	return 0;
+}
+
+float pole(const float& pi, const float& r) {
+	return pi * (r * r);
+}
+float obwod(const float& pi, const float& r) {
+	return 2 * pi * r;
+}
