@@ -32,6 +32,10 @@ int main() {
 	strcpy_s(napis2, "to też jest ");
 
 	cout << "napis: " << napis2 << endl;
+	
+	
+	
+
 
 	//dodanie znakow do c-napisu na koncu
 
@@ -378,4 +382,43 @@ float pole(const float& pi, const float& r) {
 }
 float obwod(const float& pi, const float& r) {
 	return 2 * pi * r;
+}
+
+	
+	#include <iostream>
+
+using namespace std;
+
+//parametry jako wskazniki do stałych const 
+
+/*
+postać ogólna 
+const typ_parametru *nazwa parametru
+
+* operator wyłuskania (dereferencji)
+*/
+
+float pole(const float*, const float*);
+float obwod(const float*, const float*);
+
+int main() {
+	setlocale(LC_ALL, "");
+	float bok1 = 1, bok2 = 2;
+	//deklaracja i inicjalizacja wskaznikow
+	float* w_b1 = &bok1;
+	float* w_b2 = &bok2;
+
+	float p = pole(w_b1, w_b2);
+	float o = obwod(w_b1, w_b2);
+
+	cout << "Pole: " << p << endl;
+	cout << "Obwód: " << o << endl;
+
+	return 0;
+}
+float pole(const float* bok1, const float* bok2) {
+	return (*bok1) * (*bok2);
+}
+float obwod(const float* bok1, const float* bok2) {
+	return 2 *(*bok1) + 2* (*bok2);
 }
