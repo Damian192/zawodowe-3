@@ -422,3 +422,58 @@ float pole(const float* bok1, const float* bok2) {
 float obwod(const float* bok1, const float* bok2) {
 	return 2 *(*bok1) + 2* (*bok2);
 }
+	
+	
+	
+	#include <iostream>
+using namespace std;
+
+//wskazniki jako parametry funkcji
+/*
+ ogólna postaćparametru przekazywanego przez wskaznik
+
+ typ_parametru *nazwa parametru
+ 
+ */
+ 
+//deklaracja
+void pole_f(double, double, double*);
+// 2 parametry wejsciowe przekazywane przez wartosc
+// 1 parametr wyjsciowywy przekazywany przez wskaznik 
+// funkcja nic nie zwraca 
+
+double* obwod_f(const double*, const double*, const double*);
+// 2 parametry wejsciowe bedace wskaznikami do stalych
+// 1 parametr wyjsciowy przekazywany przez wskaznik 
+// fukcja zwraca na zewnatrz wskaznik (jest rownowazny parametrowi wyjsciowemu funkcji)
+int main() {
+	setlocale(LC_ALL, "");
+
+	double bok1 = 1, bok2 = 2, pole = 0;
+
+	//utworzenie wskaznika i jego inicjalizacja
+
+	double* w_pole = &pole;
+
+	pole_f(bok1, bok2, w_pole);
+
+	double* w_bok1 = &bok1;
+	double* w_bok2 = &bok2;
+
+	double obwod;
+	double* w_obwod = &obwod;
+
+
+	return 0;
+}
+
+//definicja funkcji 
+void pole_f(double b1, double b2, double* w_p) {
+	*w_p = b1 * b2;
+};
+
+double* obwod_f(const double* w_b1, const double* w_b2, const double* w_o) {
+	*w_o = 2* *w_b1 + 2 * *w_b2; //operator wyłuskania wartosci
+	return w_o;
+}
+
