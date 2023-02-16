@@ -40,3 +40,33 @@ void wyswietlDane(const Pracownik& p) {
 	cout << "Imie: " << p.imie << endl;
 	cout << "Nazwisko: " << p.nazwisko << endl;
 }
+
+#include <iostream>
+
+using namespace std;
+
+//tablice jako parametry funkcji
+
+//deklaracja stalej globalnej 
+
+const int n = 5;
+
+//prototyp funkcji
+
+void daneWejsciowe(double[]);
+//podczas kompilacji zapis double[] jest zamieniany na zapis równoważny double*
+//oznacza to ze do funkcji jest przekazywany wskaznik do pierwszego skladowego elementu tablicy
+
+
+void sumaElementow(const double[], double&);
+//pierwszy parametr jest wskaznikiem do stalej typu double
+// drugi parametr jest referencja do zmiennej nalezacej do typu double
+int main() {
+    setlocale(LC_ALL, "PL_pl");
+    
+    
+
+    return 0;
+}
+
+
