@@ -63,10 +63,33 @@ void sumaElementow(const double[], double&);
 // drugi parametr jest referencja do zmiennej nalezacej do typu double
 int main() {
     setlocale(LC_ALL, "PL_pl");
-    
-    
+
+    double tab[n], suma;
+
+    cout << "Dane wejsciowe: " << endl;
+    daneWejsciowe(tab); //argument tab jest wskaznikiem do pierwszego elementu tablicy 
+
+    sumaElementow(tab, suma);
+    cout << "Suma elementow tablicy: " << suma << endl;
 
     return 0;
 }
+void daneWejsciowe(double t[]) { // tablica parametr wejscia wyjscia
+    for (int i = 0; i < n; i++) {
+        cout << "Tablica[" << i << "]= " << endl;
+        cin >> t[i];
+    }
+}
 
-
+void sumaElementow(const double t[], double& suma) { // suma parametr wyjsciowy / tablica to parametr wejsciowy
+    suma = 0;
+    for (int i = 0; i < n; i++) {
+        suma += t[i];
+    }
+}
+/*
+    parametr t oznacza wskaznik na typ double: double t* który odpowiada typowi elementow skladowych tablicy.
+    jezeli w programie glownym zadeklarowano tablice double tab[n], oraz w kazdej z funkcji argumentem jest 
+    zmienna (wskaznik) tab, to zapis ten jest kopiowany do parametru formalnego t.
+    zapis tab[i] jest równoważny zapisowi t[i] oraz *(t+i).
+    */
