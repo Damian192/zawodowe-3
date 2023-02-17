@@ -93,3 +93,51 @@ void sumaElementow(const double t[], double& suma) { // suma parametr wyjsciowy 
     zmienna (wskaznik) tab, to zapis ten jest kopiowany do parametru formalnego t.
     zapis tab[i] jest równoważny zapisowi t[i] oraz *(t+i).
     */
+
+
+
+//////////////////////////////////////////////////////////////// zadanie tablica jako parametr funkcji najmniejsza i najwieksza wartosc
+
+
+#include <iostream>
+
+using namespace std;
+
+const int n = 5;
+
+void daneWejsciowe(double[]);
+
+void sumaElementow(const double[], double&, double&);
+
+int main() {
+    setlocale(LC_ALL, "PL_pl");
+
+    double tab[n], najwiekszy, najmniejszy;
+
+    cout << "Dane wejsciowe: " << endl;
+    daneWejsciowe(tab); 
+
+    sumaElementow(tab, najwiekszy, najmniejszy);
+    cout << "Najwiekszy element tablicy: " << najwiekszy << endl;
+    cout << "Najmniejszy element tablicy: " << najmniejszy << endl;
+
+    return 0;
+}
+void daneWejsciowe(double t[]) { 
+    for (int i = 0; i < n; i++) {
+        cout << "Tablica[" << i << "]= ";
+        cin >> t[i];
+    }
+}
+
+void sumaElementow(const double t[], double& najwiekszy, double& najmniejszy) { 
+    najwiekszy = t[0], najmniejszy = t[0];
+    for (int i = 0; i < n; i++) {
+        if (t[i] > najwiekszy) {
+            najwiekszy = t[i];
+        }
+        if (t[i] < najmniejszy) {
+            najmniejszy = t[i];
+        }
+    }
+}
