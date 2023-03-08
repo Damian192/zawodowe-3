@@ -61,6 +61,14 @@
         );
 
         echo $dane[2]["nazwisko"];
+
+        $a2 = 23.70;
+        $a3 = (integer) $a2;
+        echo "<br> $a2 <br> $a3 ";
+        $a4 = 15.323;
+        echo "zadeklarowana wartosc zmiennej \$a4: $a4 <br>";
+        settype($a4, 'string');
+        echo "warosc zmiennej \$a4 po zmianie typu na string: $a4 <br>"
         ?>
         
     </p>
