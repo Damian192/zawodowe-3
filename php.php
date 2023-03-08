@@ -25,10 +25,10 @@
          echo "$y";
         
          $napis = "napis";
-         $tekst = <<ID
+         $tekst = <<ID;
          <br> tutaj rozpoczyna sie $napis <br>
          tutaj jest kontynuowany. <br>
-         ID
+         ID;
          echo $tekst;
 
          //howdoc
@@ -68,7 +68,9 @@
         $a4 = 15.323;
         echo "zadeklarowana wartosc zmiennej \$a4: $a4 <br>";
         settype($a4, 'string');
-        echo "warosc zmiennej \$a4 po zmianie typu na string: $a4 <br>"
+        echo "warosc zmiennej \$a4 po zmianie typu na string: $a4 <br>";
+        settype($a4, "integer");
+        echo "warosc zmiennej \$a4 po zmianie typu na integer: $a4 <br>";
         ?>
         
     </p>
