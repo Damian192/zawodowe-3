@@ -164,11 +164,11 @@ void sumaNapisow(const char n1[], const char n2[], const char n3[]) {
 
 	char bufor[10] = "";
 
-	strcat(bufor, n1);
-	strcat(bufor, " ");
-	strcat(bufor, n2);
+	strcat_s(bufor, n1);
+	strcat_s(bufor, " ");
+	strcat_s(bufor, n2);
 
-	strcat(bufor, n3);
+	strcat_s(bufor, n3);
 }
 //funkcja tworzy konkatenacje napisow.
 //pierwszy parametr wejsciowy o nazwie n1 jest przekazywany do funkcji jako wskaznik do stalej const typu char
