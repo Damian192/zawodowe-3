@@ -141,3 +141,44 @@ void sumaElementow(const double t[], double& najwiekszy, double& najmniejszy) {
         }
     }
 }
+
+
+#include <iostream>
+using namespace std;
+
+//Łancuchy znaków jako parametry funkcji
+
+//definicje funkcji
+
+void pobierzNapis(char n[]) {
+	cin >> n;
+}
+//funkcja ma jeden parametr wyjsciowy o nazwie n typu wskaznikowego char*
+
+void wyswietlNapis(const char n[]) {
+	cout << n << endl;
+}
+//funkcja ma jeden parametr wejsciowy o nazwie n, przekazywany do funkcji jako wskaznik do stalej const typu char
+
+void sumaNapisow(const char n1[], const char n2[], const char n3[]) {
+
+	char bufor[10] = "";
+
+	strcat(bufor, n1);
+	strcat(bufor, " ");
+	strcat(bufor, n2);
+
+	strcat(bufor, n3);
+}
+//funkcja tworzy konkatenacje napisow.
+//pierwszy parametr wejsciowy o nazwie n1 jest przekazywany do funkcji jako wskaznik do stalej const typu char
+//drugi parametr wejsciowy o nazwie n2 jest przekazywany do funkcji jako wskaznik do stalej const typu char
+//trzeci parametr wyjsciowy o nazwie n3 jest przekazywany do funkcji jako wskaznik do stalej const typu char
+int main() {
+	setlocale(LC_ALL, "");
+
+	
+
+	return 0;
+}
+
