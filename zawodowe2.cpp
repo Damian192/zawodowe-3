@@ -177,6 +177,17 @@ void sumaNapisow(const char n1[], const char n2[], const char n3[]) {
 int main() {
 	setlocale(LC_ALL, "");
 
+		setlocale(LC_ALL, "");
+	char nazwaJezyka[10] = "", wersjaJezyka[10] = "", jezyk[10];
+	cout << "Podaj nazwę jezyka programowania: ";
+	pobierzNapis(nazwaJezyka);
+	cout << "Podaj wersje: ";
+	pobierzNapis(wersjaJezyka);
+
+	sumaNapisow(nazwaJezyka, wersjaJezyka, jezyk);
+
+	cout << "Jezyk programowania: ";
+	wyswietlNapis(jezyk);
 	
 
 	return 0;
