@@ -193,3 +193,35 @@ int main() {
 	return 0;
 }
 
+#include <iostream>
+
+using namespace std;
+
+//parametry domyślne
+
+void wyswietl_pi(float pi = 3.14) {
+	cout << "Stała pi = " << pi << endl;
+} //parametr pi jest przekazywany przez wartosc 
+
+void wyswietl_e(const float& e = 2.71) {
+	cout << "Stała e = " << e << endl;
+} //parametr e jest przekazywany do funkcji przez referencje do stalej typu float
+
+int main() {
+	setlocale(LC_ALL, "");
+
+	wyswietl_pi();
+	//funkcja zostala wywołana bez zadnego argumentu. domyslnym argumentem stają się automatycznie wartości domyślne parametrow formalnych
+
+	const float Pi = 3.14159;
+	wyswietl_pi(Pi);
+	//funkcja wywolana z jednym argumentem podanym w sposob jawny. Argument domyslny zostal nadpisany przez argument zadany
+
+	wyswietl_e();
+	const float E = 2.712828;
+	wyswietl_e(E);
+
+
+
+	return 0;
+}
