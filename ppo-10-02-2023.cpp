@@ -93,3 +93,31 @@ void pobierzDane(Pracownik& p) {
 
 //Zmodyfikuj program - dane wejściowe (zmienne członkowskie) C-struktury p1 mają być wprowadzane 
 //z klawiatury za pomocą funkcji pobierzDane(), która przekazuje wspomnianą C-strukturę jako wartość zwracaną.
+
+#include <iostream>
+
+using namespace std;
+
+void pole(float r, float pi = 3.14 ) {
+	cout << "Pole koła wynosi = " << pi * r *r << endl;
+} 
+
+void obowod(float r, float pi = 3.14) {
+	cout << "Obwód koła wynosi = " << 2 * pi *r << endl;
+}
+int main() {
+	setlocale(LC_ALL, "");
+	float r;
+
+	cout << "Podaj promień: ";
+	cin >> r;
+	pole(r);
+	obowod(r);
+
+	return 0;
+}
+//Napisz program pozwalający obliczyć pole i obwód koła. 
+// Wykorzystaj zdefiniowane samodzielnie funkcje pole() i obwod(). 
+//Każda z wymienionych funkcji powinna mieć po dwa parametry
+//wejściowe: jeden odpowiadający stałej pi, a drugi - długości promienia koła.
+//Parametr formalny reprezentujący stałą pi należy zdefiniować jako domyślny.
