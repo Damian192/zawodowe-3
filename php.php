@@ -108,3 +108,53 @@ switch($kolor) {
 }
 ?>
 </p>
+
+
+
+
+    //operator warunkowy
+    //warunek ? wartosc1: wartosc2
+    //jezeli warunek bedzie prawdziwy to wartosc wyrazenia wyniesie wartosc wartosc1
+    //jezeli nie to wartosc 2
+
+
+
+    $x=11;
+    $wynik= ($x <0) ? "ujemna": "dodatnia";
+    echo "wartość zmiennej x jest $wynik";
+                    
+                        for($i=1;$i<=5;$i++) {
+        echo "Pętla wykonana po raz: $i <br>";
+    }
+
+
+
+
+    $x = 0;
+    while($x++<5) {
+        echo "Pętla wykonana po raz: $x <br>";
+    }
+                  
+                   /*
+  * foreach($tablica as $wartosc) {
+  *     instrukcje;
+  * }
+  * 
+  * lub
+  * foreach($tablica as $klucz => $wartosc) {
+  * instrukcje;
+  * w tym przypadku oprocz wartosci argumentu
+  * otrzymujemy wartosc aktualnego klucza
+  *}
+  */
+
+    $tab = array(
+        1=> 'blue',
+        2=>'red',
+        3=>'green',
+        4=>'white',
+        5=>'black'
+    );
+    foreach($tab as $a) {
+        echo "$a <br>";
+    };
