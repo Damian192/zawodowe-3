@@ -76,3 +76,33 @@
     </p>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+</php
+
+$kolor="red";
+switch($kolor) {
+    case "red":
+        echo: "DOminujacym kolorem jest czerwony!";
+        break;
+    case "blue":
+        echo: "Dominujacym kolorem jest niebieski!";
+        break;
+    case "green":
+        echo: "DOminujacym kolorem jest zielony";
+        break;
+    default:
+    echo: "Brak dominujacego koloru!";
+}
+?>
+</p>
