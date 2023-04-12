@@ -158,3 +158,49 @@ switch($kolor) {
     foreach($tab as $a) {
         echo "$a <br>";
     };
+
+        
+        
+        
+        
+         <style>
+        table,th,td {
+        text-align: left;
+        width: 400px;
+        border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <p>
+    
+<?php
+    //bloki php i html
+
+    $tx = true;
+    if(isset($_POST['button'])) {
+        $tx = false;
+    }
+    if(isset($_POST['button2'])) {
+        $tx = true;
+    }
+    if($tx) {
+?>
+
+<table>
+    <tr><th>Nazwisko</th><th>Imię</th><th>Telefon</th></tr>
+    <tr><td>Kowalski</td><td>Jan</td><td>123321123</td></tr>
+    <tr><td>Nowak</td><td>Adam</td><td>123321123</td></tr>
+    <tr><td>Ptak</td><td>Adam</td><td>123321123</td></tr>
+</table>
+<?php
+}
+?>
+<br>
+<form method="post">
+    <input type="submit" name="button" value="ukryj"/>
+    <input type="submit" name="button2" value="pokaz"/>
+</form>
+</p>
+        
