@@ -121,3 +121,10 @@ int main() {
 //Każda z wymienionych funkcji powinna mieć po dwa parametry
 //wejściowe: jeden odpowiadający stałej pi, a drugi - długości promienia koła.
 //Parametr formalny reprezentujący stałą pi należy zdefiniować jako domyślny.
+
+
+
+
+
+Napisz program pozwalający przeliczyć jednostki długości w systemie SI (np. centymetr, metr, kilometr) na jednostki w systemie anglosaskim (np. cal, stopę, jard, milę) i odwrotnie.
+Należy wykorzystać utworzony plik nagłówkowy z prototypami funkcji oraz plik źródłowy z definicjami tych funkcji.
